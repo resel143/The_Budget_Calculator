@@ -1,0 +1,118 @@
+*,::before,::after{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    --primColor:#2aa198;
+    --secColor: #46748b;
+    --lightColor:#fff;
+    --darkColor: #444;
+    --bgColor: #264f63;
+}
+
+
+body{
+    font-family: 'Roboto', sans-serif;
+    /* color: var(--primColor); */
+    background-color: var(--lightColor);
+}
+
+h1{
+    text-align: center;
+    font-size: 6rem;
+    margin: 3rem 0;
+    color: var(--secColor);
+    letter-spacing: 2px;
+}
+
+section{
+    width: 550px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+
+}
+
+.form-group{
+    /* display: flex;
+    align-items: center;
+    align-content: center;
+    justify-content: space-between;
+    background-color: var(--bgColor);
+    padding: 0.2rem 0.5rem;
+    border-radius: 5px;
+    box-shadow: 0 0 15px 5px rgba(0, 0, 0, 0.2); */
+    display: none;
+    /* animation: scaleUp 0.2s ease; */
+}
+
+.form-group:hover{
+    background-color: var(--secColor);
+}
+label{
+    font-size: 1.2rem;
+    color: var(--lightColor);
+}
+
+.show{
+    display: flex;
+    align-items: center;
+    align-content: center;
+    justify-content: space-between;
+    background-color: var(--bgColor);
+    padding: 0.2rem 0.5rem;
+    border-radius: 5px;
+    box-shadow: 0 0 15px 5px rgba(0, 0, 0, 0.2);
+    animation: scaleUp 0.2s ease;
+}
+
+@keyframes scaleUp{
+    0%{
+        transform: scale(0.1);
+    }
+    100%{
+        transform: scale(1);
+    }
+}
+
+output{
+    width: 150px;
+    color: var(--darkColor);
+    font-weight: bolder;
+    font-size: 1.2rem;
+    text-align: right;
+    background-color: var(--lightColor);
+}
+
+input:focus{
+    background-color: var(--lightColor);
+    outline: none;
+    border: none;
+}
+
+.btn{
+    margin-bottom: 1rem;
+    font-size: 1.3rem;
+}
+
+.btn:active{
+    transform: scale(0.98);
+    transition: 0.1s ease;
+}
+
+.dropdown{
+    color: var(--primColor);
+    cursor: pointer;
+
+}
+
+.dropdown:hover{
+    text-decoration: underline;
+}
+
+.dropdown:active{
+    color: var(--secColor);
+    transition: 0.1s ease;
+}
