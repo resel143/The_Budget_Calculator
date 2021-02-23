@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+      integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk"
+      crossorigin="anonymous"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <title>Budget Calculator</title>
+  </head>
+  <body>
+    <h1>Budget Calculator</h1>
+    <!--  Monthly Savings-->
+
+    <section id="Monthly-Savings">
+      <a><h2 class="dropdown">Monthly Savings &#10162;</h2></a>
+
+      <header class="form-group">
+        <span class="input-group-text">Total Σ=</span>
+        <output id="Monthly-Savings-Output"></output>
+      </header>
+      <div class="form-group">
+        <label class="control-label">Emergency Fund:</label>
+        <div class="form-group">
+          <span class="input-group-text">$</span>
+          <input id="EmergencyFund" type="number" placeholder="0.00" />
+        </div>
+      </div>
+      <div class="form-group">
+        <label class="control-label">Investments:</label>
+        <div class="form-group">
+          <span class="input-group-text">$</span>
+
+          <input id="Investments" type="number" placeholder="0.00" />
+        </div>
+      </div>
+      <div class="form-group">
+        <label class="control-label">Retirement:</label>
+        <div class="form-group">
+          <span class="input-group-text">$</span>
+
+          <input id="Retirement" type="number" placeholder="0.00" />
+        </div>
+      </div>
+    </section>
+
+    <!-- Monthly Expenses -->
+
+    <section id="Monthly-Expenses">
+      <a><h2 class="dropdown">Monthly Expenses &#10162;</h2></a>
+      <header class="form-group">
+        <span class="input-group-text">Total Σ=</span>
+        <output id="Monthly-Expenses-Output"></output>
+      </header>
+      <div class="form-group">
+        <label class="control-label">Food (groceries, dining out, etc.):</label>
+        <div class="form-group">
+          <span class="input-group-text">$</span>
+          <input id="Food" type="number" placeholder="0.00" />
+        </div>
+      </div>
+      <div class="form-group">
+        <label class="control-label"
+          >Clothing (jeans, shoes, jewelry, etc.):</label
+        >
+        <div class="form-group">
+          <span class="input-group-text">$</span>
+
+          <input id="Clothing" type="number" placeholder="0.00" />
+        </div>
+      </div>
+      <div class="form-group">
+        <label class="control-label"
+          >Shelter (mortgage, rent, taxes, etc.):</label
+        >
+        <div class="form-group">
+          <span class="input-group-text">$</span>
+
+          <input id="Shelter" type="number" placeholder="0.00" />
+        </div>
+      </div>
+      <div class="form-group">
+        <label class="control-label"
+          >Household (utilities, cell phone, cable, maintenance, etc.):</label
+        >
+        <div class="form-group">
+          <span class="input-group-text">$</span>
+
+          <input id="Household" type="number" placeholder="0.00" />
+        </div>
+      </div>
+      <div class="form-group">
+        <label class="control-label"
+          >Transportation (public transportation, parking, gas, etc.):</label
+        >
+        <div class="form-group">
+          <span class="input-group-text">$</span>
+
+          <input id="Transportation" type="number" placeholder="0.00" />
+        </div>
+      </div>
+      <div class="form-group">
+        <label class="control-label"
+          >Health (insurance, medications, doctor visits, etc.):</label
+        >
+        <div class="form-group">
+          <span class="input-group-text">$</span>
+
+          <input id="Health" type="number" placeholder="0.00" />
+        </div>
+      </div>
+      <div class="form-group">
+        <label class="control-label"
+          >Student Loans (interest/principal payments, etc.):</label
+        >
+        <div class="form-group">
+          <span class="input-group-text">$</span>
+
+          <input id="Student-Loans" type="number" placeholder="0.00" />
+        </div>
+      </div>
+      <div class="form-group">
+        <label class="control-label">
+          Personal (gifts, charity, entertainment, hobbies, etc.):</label
+        >
+        <div class="form-group">
+          <span class="input-group-text">$</span>
+
+          <input id="Personal" type="number" placeholder="0.00" />
+        </div>
+      </div>
+      <div class="form-group">
+        <label class="control-label">
+          Miscellaneous (magazines, child care, etc.):</label
+        >
+        <div class="form-group">
+          <span class="input-group-text">$</span>
+
+          <input id="Miscellaneous" type="number" placeholder="0.00" />
+        </div>
+      </div>
+    </section>
+
+    <!-- Annual Expenses -->
+
+    <section id="Annual-Expenses">
+      <a><h2 class="dropdown">Annual Expenses &#10162;</h2></a>
+      <header class="form-group">
+        <span class="input-group-text">Total Σ=</span>
+        <output id="Annual-Expenses-Output"></output>
+      </header>
+      <div class="form-group">
+        <label class="control-label"> Tuition:</label>
+        <div class="form-group">
+          <span class="input-group-text">$</span>
+
+          <input id="Tuition" type="number" placeholder="0.00" />
+        </div>
+      </div>
+      <div class="form-group">
+        <label class="control-label"> Homeowner's/Renter's Insurance:</label>
+        <div class="form-group">
+          <span class="input-group-text">$</span>
+
+          <input id="Homeowner-Rent" type="number" placeholder="0.00" />
+        </div>
+      </div>
+      <div class="form-group">
+        <label class="control-label">
+          Car (registration, inspection, insurance, etc.):</label
+        >
+        <div class="form-group">
+          <span class="input-group-text">$</span>
+
+          <input id="Car" type="number" placeholder="0.00" />
+        </div>
+      </div>
+      <div class="form-group">
+        <label class="control-label"> Taxes:</label>
+        <div class="form-group">
+          <span class="input-group-text">$</span>
+
+          <input id="Taxes" type="number" placeholder="0.00" />
+        </div>
+      </div>
+      <div class="form-group">
+        <label class="control-label"> Vacation:</label>
+        <div class="form-group">
+          <span class="input-group-text">$</span>
+
+          <input id="Vacation" type="number" placeholder="0.00" />
+        </div>
+      </div>
+      <div class="form-group">
+        <label class="control-label"> Other:</label>
+        <div class="form-group">
+          <span class="input-group-text">$</span>
+
+          <input id="Other" type="number" placeholder="0.00" />
+        </div>
+      </div>
+    </section>
+
+    <!-- Monthly Income -->
+    <section id="Income">
+      <a><h2 class="dropdown">Income &#10162;</h2></a>
+      <header class="form-group">
+        <span class="input-group-text">Total Σ=</span>
+        <output id="Income-Output"></output>
+      </header>
+      <div class="form-group">
+        <label class="control-label"> Monthly Pay:</label>
+        <div class="form-group">
+          <span class="input-group-text">$</span>
+          <input id="Monthly-Pay" type="number" placeholder="0.00" />
+        </div>
+      </div>
+      <div class="form-group">
+        <label class="control-label">
+          Monthly Other (alimony, child support, etc.):</label
+        >
+        <div class="form-group">
+          <span class="input-group-text">$</span>
+          <input id="Monthly-Other" type="number" placeholder="0.00" />
+        </div>
+      </div>
+      <div class="form-group">
+        <label class="control-label"> Side Hustle:</label>
+        <div class="form-group">
+          <span class="input-group-text">$</span>
+          <input id="Side-Hustle" type="number" placeholder="0.00" />
+        </div>
+      </div>
+      <div class="form-group">
+        <label class="control-label"> Annual Tax Return:</label>
+        <div class="form-group">
+          <span class="input-group-text">$</span>
+          <input id="Tax-return" type="number" placeholder="0.00" />
+        </div>
+      </div>
+    </section>
+
+    <!-- Budget Review -->
+
+    <section id="BudgetReview">
+      <a> <h2 class="dropdown">Budget Review &#10162;</h2></a>
+      <button id="budget-review-Btn" class="btn btn-success">
+        Generate Review
+      </button>
+      <div class="form-group">
+        <label class="control-label">Total Monthly Savings:</label>
+        <div class="form-group">
+          <span class="input-group-text">$</span>
+          <output id="Total-Monthly-Savings"> </output>
+        </div>
+      </div>
+      <div class="form-group">
+        <label class="control-label">Total Monthly Expenses:</label>
+        <div class="form-group">
+          <span class="input-group-text">$</span>
+          <output id="Total-Monthly-Expenses"> </output>
+        </div>
+      </div>
+      <div class="form-group">
+        <label class="control-label">Total Annual Expenses:</label>
+        <div class="form-group">
+          <span class="input-group-text">$</span>
+          <output id="Total-Annual-Expenses"> </output> /12
+          <output id="Total-Annual-Monthly-Expenses"> </output>
+        </div>
+      </div>
+      <div class="form-group">
+        <label class="control-label">Total Monthly Income:</label>
+        <div class="form-group">
+          <span class="input-group-text">$</span>
+          <output id="Total-Monthly-Income"></output>
+        </div>
+      </div>
+      <div class="form-group">
+        <label class="control-label">Under/Over Budget:</label>
+        <div class="form-group">
+          <span class="input-group-text">$</span>
+          <output id="Under-Over-Budget"></output>
+        </div>
+      </div>
+    </section>
+
+    <script src="app.js"></script>
+  </body>
+</html>
